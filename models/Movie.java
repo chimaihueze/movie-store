@@ -39,6 +39,10 @@ public class Movie {
         return sellingPrice;
     }
 
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
     // setters
 
     public void setName(String name) {
