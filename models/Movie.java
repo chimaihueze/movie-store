@@ -14,6 +14,7 @@ public class Movie {
         this.rating = rating;
         this.sellingPrice = sellingPrice;
         this.rentingPrice = rentingPrice;
+        this.isAvailable = true;
     }
 
     // getters
