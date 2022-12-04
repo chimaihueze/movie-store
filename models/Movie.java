@@ -57,11 +57,11 @@ public class Movie {
         this.rating = rating;
     }
 
-    public void setRentingPrice(double rentingPrice) {
+    private void setRentingPrice(double rentingPrice) {
         this.rentingPrice = rentingPrice;
     }
 
-    public void setSellingPrice(double sellingPrice) {
+    private void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
     
