@@ -25,4 +25,8 @@ public class Store {
         movies.add(movie);
     }
 
+    // sellMovie
+    public void sellMovie(Movie movieName) {
+        movies.remove(movieName);
+    }
 }
