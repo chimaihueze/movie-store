@@ -77,6 +77,9 @@ public class Movie {
     }
 
     public void setFormat(String format) {
+        if (format == null || format.isBlank()) {
+            throw new IllegalArgumentException("Sorry, format cannot be set to blank/null");
+        }
         this.format = format;
     }
 
