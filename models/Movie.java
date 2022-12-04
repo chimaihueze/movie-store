@@ -75,5 +75,20 @@ public class Movie {
     private void setSellingPrice(double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
+
+    // toString
+    public String toString() {
+        return "\t Name: " + this.name + "\n" +
+
+                "\t Format: " + this.format + "\n" +
+
+                "\t Rating: " + this.rating + "\n" +
+
+                "\t Selling Price: " + this.sellingPrice + "\n" +
+
+                "\t Rental Price: " + this.rentingPrice + "\n" +
+
+                "\t Availability: " + (this.isAvailable ? "in-stock" : "rented") + "\n";
+    }
     
 }
