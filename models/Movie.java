@@ -70,6 +70,9 @@ public class Movie {
     // setters
 
     public void setName(String name) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Sorry, name can not be set to blank/null.");
+        }
         this.name = name;
     }
 
