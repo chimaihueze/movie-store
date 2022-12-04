@@ -36,4 +36,13 @@ public class Store {
             }
         }
     }
+
+    // toString
+    public String toString() {
+        String temp = " ";
+        for (int i = 0; i < movies.size(); i++) {
+            temp += this.movies.get(i).toString();
+            temp += "\n\n";
+        } return temp;
+    }
 }
