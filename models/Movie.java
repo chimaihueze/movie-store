@@ -84,6 +84,9 @@ public class Movie {
     }
 
     public void setRating(double rating) {
+        if (rating < 0 || rating> 10) {
+            throw new IllegalArgumentException("Sorry, rating can not be set to less than 0 or more than 10");
+        }
         this.rating = rating;
     }
 
