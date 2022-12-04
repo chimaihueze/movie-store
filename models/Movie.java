@@ -98,6 +98,12 @@ public class Movie {
         this.sellingPrice = sellingPrice;
     }
 
+    // setAvailable
+    public void setAvailable(boolean availability) {
+        this.isAvailable = availability;
+
+    }
+
     // toString
     public String toString() {
         return "\t Name: " + this.name + "\n" +
