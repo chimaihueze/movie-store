@@ -10,6 +10,19 @@ public class Movie {
 
     // Constructor
     public Movie(String name, String format, double rating) {
+
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Sorry, name cannot be blank/null");
+        }
+
+        if (format.equalsIgnoreCase("Blue-Ray") || format.equalsIgnoreCase("DVD")) {
+            throw new IllegalArgumentException("Sorry, format must be Blue-Ray or DVD");
+        }
+
+        if (rating < 0 || rating > 10) {
+            throw new IllegalArgumentException("Sorry, improper rating scale.");
+        }
+
         this.name = name;
         this.format = format;
         this.rating = rating;
