@@ -24,6 +24,16 @@ public class Store {
     public void addMovie(Movie movie) {
         movies.add(new Movie(movie));
     }
-    
 
+    public void action(String name, String action) {
+        for (int i = 0; i < movies.size(); i++) {
+            if (movies.get(i).getName().equals(name)) {
+                switch (action) {
+                    case "sell": this.movies.remove(i); break;
+                    case "rent": this.movies.get(i).setAvailable(false); break;
+                    case "return": this.movies.get(i).setAvailable(true); break;
+                }
+            }
+        }
+    }
 }
