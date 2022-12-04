@@ -11,14 +11,18 @@ public class Store {
     }
 
     // getter
-
     public Movie getMovies(int index) {
         return new Movie(this.movies.get(index));
     }
 
     // setter
-
     public void setMovies(int index, Movie movie) {
         this.movies.set(index, movie);
     }
+
+    // addMovie
+    public void addMovie(Movie movie) {
+        movies.add(movie);
+    }
+
 }
