@@ -12,8 +12,8 @@ public class Movie {
         this.name = name;
         this.format = format;
         this.rating = rating;
-        this.sellingPrice = sellingPrice;
-        this.rentingPrice = rentingPrice;
+        this.sellingPrice = format.equals("Blue-Ray") ? 4.25 : 2.25;
+        this.rentingPrice = format.equals("Blue-Ray") ? 1.99 : 0.99;
         this.isAvailable = true;
     }
 
