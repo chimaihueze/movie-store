@@ -8,6 +8,7 @@ public class Movie {
     private double rentingPrice;
     private boolean isAvailable;
 
+    // Constructor
     public Movie(String name, String format, double rating) {
         this.name = name;
         this.format = format;
@@ -15,6 +16,16 @@ public class Movie {
         this.sellingPrice = format.equals("Blue-Ray") ? 4.25 : 2.25;
         this.rentingPrice = format.equals("Blue-Ray") ? 1.99 : 0.99;
         this.isAvailable = true;
+    }
+
+    // copy constructor
+    public Movie(Movie source) {
+        this.name = source.name;
+        this.format = source.format;
+        this.rating = source.rating;
+        this.sellingPrice = source.sellingPrice;
+        this.rentingPrice = source.rentingPrice;
+        this.isAvailable = source.isAvailable;
     }
 
     // getters
