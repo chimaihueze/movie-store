@@ -22,11 +22,26 @@ public class Store {
 
     // addMovie
     public void addMovie(Movie movie) {
-        movies.add(movie);
+        movies.add(new Movie(movie));
     }
 
     // sellMovie
-    public void sellMovie(Movie movieName) {
-        movies.remove(movieName);
+    public void sellMovie(String movieName) {
+        for (int i = 0; i < movies.size(); i++) {
+            if (movies.get(i).getName().equals(movieName)) {
+                movies.remove(i);
+            }
+        }
     }
+
+    // rentMovie
+    public void rentMovie(String movieName) {
+        for (int i = 0; i < movies.size(); i++) {
+            if (movies.get(i).getName().equals(movieName)) {
+                movies.remove(i);
+            }
+        }
+    }
+
+
 }
