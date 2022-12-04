@@ -6,7 +6,7 @@ public class Movie {
     private double rating;
     private double sellingPrice;
     private double rentingPrice;
-    private String isAvailable;
+    private boolean isAvailable;
 
     public Movie(String name, String format, double rating) {
         this.name = name;
