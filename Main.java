@@ -1,4 +1,9 @@
+import models.Movie;
+import models.Store;
+
 public class Main {
+    // movie list
+    static Store store = new Store();
     public static void main(String[] args) {
         System.out.println("\n********************JAVA VIDEO STORE********************\n");
 
