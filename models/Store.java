@@ -26,6 +26,18 @@ public class Store {
     }
 
     public void action(String name, String action) {
+        if (action == null || action.isBlank()) {
+            throw new IllegalArgumentException("Sorry! Action shouldn't be null/blank");
+        }
+
+        if (!(action.equalsIgnoreCase("sell") || action.equalsIgnoreCase("rent") || action.equalsIgnoreCase("return"))) {
+            throw new IllegalArgumentException("Sorry! Action should either be sell, rent or return ");
+        }
+
+        if (movies.isEmpty()) {
+            throw new IllegalStateException("Sorry, the list is empty");
+        }
+
         for (int i = 0; i < movies.size(); i++) {
             if (movies.get(i).getName().equals(name)) {
                 switch (action) {
