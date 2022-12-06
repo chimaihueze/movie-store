@@ -41,7 +41,10 @@ public class Store {
         for (int i = 0; i < movies.size(); i++) {
             if (movies.get(i).getName().equals(name)) {
                 switch (action) {
-                    case "sell": this.movies.remove(i); break;
+                    case "sell": if (!(movies.get(i).isAvailable())) {
+                        throw new IllegalStateException("Can't sell a movie that's rented out");
+                    }
+                        this.movies.remove(i); break;
                     case "rent": this.movies.get(i).setAvailable(false); break;
                     case "return": this.movies.get(i).setAvailable(true); break;
                 }
