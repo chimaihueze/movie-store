@@ -14,7 +14,7 @@ public class Main {
             loadMovies("movies.txt");
             System.out.println("MOVIES LOADED\n\n");
             System.out.println(store);
-
+            manageMovies();
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         } finally {
