@@ -10,6 +10,16 @@ public class Main {
     static Store store = new Store();
     public static void main(String[] args) {
         System.out.println("\n********************JAVA VIDEO STORE********************\n");
+        try {
+            loadMovies("movies.txt");
+            System.out.println("MOVIES LOADED\n\n");
+            System.out.println(store);
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("Process Complete\n\n");
+        }
+
 
     }
 
@@ -37,7 +47,7 @@ public class Main {
      */
 
 
-    public void loadMovies(String fileName) throws FileNotFoundException {
+    public static void loadMovies(String fileName) throws FileNotFoundException {
         FileInputStream fis = new FileInputStream(fileName);
         Scanner scanFile = new Scanner(fis);
 
