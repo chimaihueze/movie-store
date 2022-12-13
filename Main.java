@@ -1,6 +1,10 @@
 import models.Movie;
 import models.Store;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Main {
     // movie list
     static Store store = new Store();
@@ -32,4 +36,15 @@ public class Main {
      *        Hint: You will need to 'split' a String into three Strings.
      */
 
+
+    public void loadMovies(String fileName) throws FileNotFoundException {
+        FileInputStream fis = new FileInputStream(fileName);
+        Scanner scanFile = new Scanner(fis);
+
+        while (scanFile.hasNextLine()) {
+            String line = scanFile.nextLine();
+            String [] words = line.split("--");
+            store.addMovie(new Movie(words[0], words[1], Double.parseDouble(words[2])));
+        } scanFile.close();
+    }
 }
