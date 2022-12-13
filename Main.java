@@ -14,6 +14,7 @@ public class Main {
             loadMovies("movies.txt");
             System.out.println("MOVIES LOADED\n\n");
             System.out.println(store);
+
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -34,6 +35,44 @@ public class Main {
      *   • 3. call close() from the Scanner object.
      */
 
+    public static void manageMovies() {
+        Scanner scan = new Scanner(System.in);
+        while (true) {
+            System.out.println("\nWould you like to \n\ta) purchase\n\tb) rent \n\tc) return.\n");
+            String response = scan.nextLine();
+
+            if (response.equalsIgnoreCase("a")) {
+                System.out.print("\tName of the movie you want to buy: ");
+                String name = scan.nextLine();
+                // Sell movie
+                store.action(name, "sell");
+                System.out.println("\n\nUPDATED MOVIES\n\n");
+                System.out.println(store);
+            }
+
+            else if (response.equalsIgnoreCase("b")) {
+                System.out.print("\tName of the movie you want to rent: ");
+                String name = scan.nextLine();
+                // rent movie
+                store.action(name, "rent");
+                System.out.println("\n\nUPDATED MOVIES\n\n");
+                System.out.println(store);
+            }
+
+            else if (response.equalsIgnoreCase("c")) {
+                System.out.print("\tName of the movie you want to return: ");
+                String name = scan.nextLine();
+                // return movie
+                store.action(name, "return");
+                System.out.println("\n\nUPDATED MOVIES\n\n");
+                System.out.println(store);
+            }
+
+            else {
+                break;
+            }
+        }
+    }
 
     /**
      * Name: loadMovies
