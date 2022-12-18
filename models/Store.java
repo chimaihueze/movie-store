@@ -10,9 +10,17 @@ public class Store {
         this.movies = new ArrayList<Movie>();
     }
 
-    // getter
+    // getters
     public Movie getMovie(int index) {
         return new Movie(this.movies.get(index));
+    }
+
+    public Movie getMovie(String name) {
+        for (int i = 0; i < this.movies.size(); i++) {
+            if (this.movies.get(i).getName().equals(name)) {
+                return new Movie(this.movies.get(i));
+            }
+        } return null;
     }
 
     // setter
