@@ -29,37 +29,6 @@ public class Main {
             String response = scan.nextLine();
 
 
-            if (response.equalsIgnoreCase("a")) {
-                System.out.print("\tName of the movie you want to buy: ");
-                String name = scan.nextLine();
-                // Sell movie
-                store.action(name, "sell");
-                System.out.println("\n\nUPDATED MOVIES\n\n");
-                System.out.println(store);
-            }
-
-            else if (response.equalsIgnoreCase("b")) {
-                System.out.print("\tName of the movie you want to rent: ");
-                String name = scan.nextLine();
-                // rent movie
-                store.action(name, "rent");
-                System.out.println("\n\nUPDATED MOVIES\n\n");
-                System.out.println(store);
-            }
-
-            else if (response.equalsIgnoreCase("c")) {
-                System.out.print("\tName of the movie you want to return: ");
-                String name = scan.nextLine();
-                // return movie
-                store.action(name, "return");
-                System.out.println("\n\nUPDATED MOVIES\n\n");
-                System.out.println(store);
-            }
-
-            else {
-                scan.close();
-                break;
-            }
         } scan.close();
     }
 
