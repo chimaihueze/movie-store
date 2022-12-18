@@ -33,6 +33,23 @@ public class Main {
                 break;
             }
 
+            System.out.print("Enter the name of the movie: ");
+            String name = scan.nextLine();
+
+            if (store.getMovie(name) == null) {
+                System.out.println("\n\nThe input you provided is not valid. Please try again\n");
+                continue;
+            }
+
+            switch (response) {
+                case "a": if (!(store.getMovie(name)).isAvailable()) {
+                    System.out.println("\n\n\n\nThe movie is not available for purchase. Please try again\n");
+                    continue;
+                }
+                    store.action(name, "sell");
+                case "b": store.action(name, "rent"); break;
+                case "c": store.action(name, "return"); break;
+            }
 
         } scan.close();
     }
