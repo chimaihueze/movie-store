@@ -11,7 +11,7 @@ public class Store {
     }
 
     // getter
-    public Movie getMovies(int index) {
+    public Movie getMovie(int index) {
         return new Movie(this.movies.get(index));
     }
 
