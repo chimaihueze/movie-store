@@ -49,7 +49,7 @@ public class Main {
                     store.action(name, "sell");
                 case "b": store.action(name, "rent"); break;
                 case "c": store.action(name, "return"); break;
-            }
+            } System.out.println("\n\nUPDATED MOVIES\n\n" + store);
 
         } scan.close();
     }
