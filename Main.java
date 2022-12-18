@@ -22,12 +22,12 @@ public class Main {
         }
     }
 
-
     public static void manageMovies() {
         Scanner scan = new Scanner(System.in);
         while (true) {
             System.out.println("\nWould you like to \n\ta) purchase\n\tb) rent \n\tc) return.\n");
             String response = scan.nextLine();
+
 
             if (response.equalsIgnoreCase("a")) {
                 System.out.print("\tName of the movie you want to buy: ");
@@ -57,6 +57,7 @@ public class Main {
             }
 
             else {
+                scan.close();
                 break;
             }
         } scan.close();
