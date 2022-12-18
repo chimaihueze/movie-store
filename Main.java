@@ -28,6 +28,11 @@ public class Main {
             System.out.println("\nWould you like to \n\ta) purchase\n\tb) rent \n\tc) return.\n");
             String response = scan.nextLine();
 
+            if (!(response.equals("a") || response.equals("b") || response.equals("c"))) {
+                scan.close();
+                break;
+            }
+
 
         } scan.close();
     }
